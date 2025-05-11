@@ -67,6 +67,34 @@ class PersonRepository {
             age = 30,
             nation = "USA",
             musicType = "Hip Hop / Rap"
+        ),
+        Person(
+            firstName = "Marina",
+            lastName = "Satti",
+            age = 38,
+            nation = "Greece",
+            musicType = "World / Pop"
+        ),
+        Person(
+            firstName = "Elettra",
+            lastName = "Lamborghini",
+            age = 30,
+            nation = "Italy",
+            musicType = "Pop / Dance"
+        ),
+        Person(
+            firstName = "Ice",
+            lastName = "Spice",
+            age = 25,
+            nation = "USA",
+            musicType = "Hip Hop / Rap"
+        ),
+        Person(
+            firstName = "Anne",
+            lastName = "Marie",
+            age = 34,
+            nation = "UK",
+            musicType = "Pop"
         )
     )
 }
