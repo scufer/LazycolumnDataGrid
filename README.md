@@ -71,6 +71,8 @@ If this project help 💁 you to develop, you can give me a cup of coffee. ☕
 
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/halilozel1903)
 
+---
+
 ## 📜 License
 ```
 MIT License
