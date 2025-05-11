@@ -16,9 +16,11 @@ A **Jetpack Compose** sample app that renders a list of artists in a neat, table
 
 ## 📱 App Preview
 
-![Screenshot](screen-1.png)
+<p align="center">
+  <img src="screen-1.png" alt="Main list" width="45%" />
+  <img src="screen-2.png" alt="Wrapped text" width="45%" />
+</p>
 
-![Screenshot](screen-2.png)
 
 ---
 
@@ -26,7 +28,7 @@ A **Jetpack Compose** sample app that renders a list of artists in a neat, table
 
 1. **Clone** the repo:  
    ```bash
-   git clone https://github.com/halilozel1903/compose-artist-list.git
+   git clone https://github.com/halilozel1903/LazycolumnDataGrid.git
    cd compose-artist-list
    ```
 2. **Open** in Android Studio Arctic Fox or newer.  
@@ -68,7 +70,7 @@ If this project help 💁 you to develop, you can give me a cup of coffee. ☕
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/halilozel1903)
 
 ## 📜 License
-
+```
 MIT License
 
 Copyright (c) 2025 Halil OZEL
