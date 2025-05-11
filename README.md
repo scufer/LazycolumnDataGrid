@@ -1,5 +1,7 @@
 # 🎶 Compose Artist Table
 
+![Compose RecyclerView](LazyColoumn.png)
+
 A **Jetpack Compose** sample app that renders a list of artists in a neat, table-style layout. Each row shows age, name, country, and music genre, complete with row & column dividers and dynamic text wrapping. Perfect for demos, tutorials, or as a starting point for your own Compose data grids! ✨
 
 ---
