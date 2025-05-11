@@ -6,6 +6,7 @@ package com.halil.ozel.recyclerviewsample
 
 import androidx.compose.foundation.layout.IntrinsicSize
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -17,67 +18,56 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
 @Composable
 fun CustomItem(person: Person) {
+    val columns = listOf(
+        Triple(person.age.toString(), 1f, MaterialTheme.typography.bodyLarge),
+        Triple("${person.firstName} ${person.lastName}", 3f, MaterialTheme.typography.bodyLarge),
+        Triple(person.nation, 2f, MaterialTheme.typography.bodyMedium),
+        Triple(person.musicType, 3f, MaterialTheme.typography.bodyMedium)
+    )
+
     Row(
         modifier = Modifier
             .fillMaxWidth()
             .height(IntrinsicSize.Min)
     ) {
-        Text(
-            text = person.age.toString(),
-            style = MaterialTheme.typography.bodyLarge,
-            modifier = Modifier
-                .weight(1f)
-                .padding(8.dp),
-            maxLines = 2
-        )
-        HorizontalDivider(
-            modifier = Modifier
-                .fillMaxHeight()
-                .width(1.dp),
-            color = Color.Gray
-        )
-        Text(
-            text = "${person.firstName} ${person.lastName}",
-            style = MaterialTheme.typography.bodyLarge,
-            modifier = Modifier
-                .weight(3f)
-                .padding(8.dp),
-            maxLines = 2
-        )
-        HorizontalDivider(
-            modifier = Modifier
-                .fillMaxHeight()
-                .width(1.dp),
-            color = Color.Gray
-        )
-        Text(
-            text = person.nation,
-            style = MaterialTheme.typography.bodyMedium,
-            modifier = Modifier
-                .weight(2f)
-                .padding(8.dp),
-            maxLines = 2
-        )
-        HorizontalDivider(
-            modifier = Modifier
-                .fillMaxHeight()
-                .width(1.dp),
-            color = Color.Gray
-        )
-        Text(
-            text = person.musicType,
-            style = MaterialTheme.typography.bodyMedium,
-            modifier = Modifier
-                .weight(3f)
-                .padding(8.dp),
-            maxLines = 2
-        )
+        columns.forEachIndexed { index, (value, weight, style) ->
+            if (index > 0) TableDivider()
+            TableCell(text = value, weight = weight, style = style)
+        }
     }
+}
+
+@Composable
+private fun RowScope.TableCell(
+    text: String,
+    weight: Float,
+    style: TextStyle,
+    maxLines: Int = 2
+) {
+    Text(
+        text = text,
+        style = style,
+        modifier = Modifier
+            .weight(weight)
+            .padding(8.dp),
+        maxLines = maxLines
+    )
+}
+
+@Composable
+private fun TableDivider() {
+    HorizontalDivider(
+        modifier = Modifier
+            .fillMaxHeight()
+            .width(1.dp),
+        color = Color.Gray
+    )
 }
 
 @Composable
