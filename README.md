@@ -1,99 +1,120 @@
-# 🎶 Compose Artist Table
+# LazyColumn DataGrid 🧱
 
-![Compose RecyclerView](lazycolumn.png)
+![GitHub release](https://img.shields.io/github/v/release/scufer/LazycolumnDataGrid) ![GitHub issues](https://img.shields.io/github/issues/scufer/LazycolumnDataGrid) ![GitHub stars](https://img.shields.io/github/stars/scufer/LazycolumnDataGrid)
 
-A **Jetpack Compose** sample app that renders a list of artists in a neat, table-style layout. Each row shows age, name, country, and music genre, complete with row & column dividers and dynamic text wrapping. Perfect for demos, tutorials, or as a starting point for your own Compose data grids! ✨
+Welcome to the **LazyColumn DataGrid** repository! This project showcases a grid-like LazyColumn in Jetpack Compose, featuring column separators, row dividers, and overflow-aware text. 
 
----
+## Table of Contents
 
-## 🚀 Features
+- [Introduction](#introduction)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Code Structure](#code-structure)
+- [Contributing](#contributing)
+- [License](#license)
+- [Releases](#releases)
 
-- **Table-style LazyColumn** with horizontal & vertical dividers  
-- **Multi-line support**: long names and genres wrap into new lines  
-- **Dynamic data**: load from a simple `PersonRepository`  
-- **Material 3** typography & theming  
-- **Previewable UI** with `@Preview` functions  
+## Introduction
 
----
+The **LazyColumn DataGrid** project aims to demonstrate the power and flexibility of Jetpack Compose for building modern Android applications. By utilizing a LazyColumn, we can efficiently display large datasets without sacrificing performance. This repository serves as a practical example for developers looking to learn more about Jetpack Compose and how to implement grid-like structures.
 
-## 📱 App Preview
+## Features
 
-<p align="center">
-  <img src="screen-1.png" alt="Main list" width="45%" />
-  <img src="screen-2.png" alt="Wrapped text" width="45%" />
-</p>
+- **Grid-like Layout**: Organize your data in a visually appealing grid format.
+- **Column Separators**: Distinguish between columns for better readability.
+- **Row Dividers**: Separate rows to enhance clarity.
+- **Overflow-aware Text**: Handle text overflow gracefully, ensuring that all content is displayed properly.
+- **Kotlin-based**: Built entirely with Kotlin, making it beginner-friendly and easy to understand.
 
+## Installation
 
----
+To get started with the LazyColumn DataGrid, follow these steps:
 
-## 🔧 Getting Started
+1. Clone the repository:
 
-1. **Clone** the repo:  
    ```bash
-   git clone https://github.com/halilozel1903/LazycolumnDataGrid.git
-   cd compose-artist-list
+   git clone https://github.com/scufer/LazycolumnDataGrid.git
    ```
-2. **Open** in Android Studio Arctic Fox or newer.  
-3. **Run** on emulator or device:  
-   - API 21+  
-   - Material 3 theme enabled  
-4. **Explore** `PersonRepository.kt` and `CustomItem.kt` for how the data & UI are wired up! 🧐
 
----
+2. Open the project in Android Studio.
 
-## 📂 Project Structure
+3. Sync the Gradle files to download the necessary dependencies.
 
-```
-├── app/
-│   ├── src/main/java/…/MainActivity.kt      # Hosts PersonList()
-│   ├── src/main/java/…/CustomItem.kt        # TableCell + Divider composables
-│   └── src/main/java/…/PersonRepository.kt  # Sample data source
-├── docs/
-│   └── screenshots/                         # Paste your screenshots here
-└── README.md                                # ← you are here!
-```
+4. Run the app on an emulator or a physical device.
 
----
+## Usage
 
-## 🤝 Contributing
+To use the LazyColumn DataGrid in your own project, you can follow these guidelines:
 
-1. Fork it! 🍴  
-2. Create your feature branch: `git checkout -b feature/YourFeature`  
-3. Commit your changes: `git commit -m 'Add awesome feature'`  
-4. Push to the branch: `git push origin feature/YourFeature`  
-5. Open a Pull Request 📝  
+1. **Import the necessary libraries**: Ensure you have Jetpack Compose set up in your project.
 
----
+2. **Create a LazyColumn**: Use the LazyColumn composable to create a scrollable list.
 
-## Donation 💸
+   ```kotlin
+   LazyColumn {
+       items(dataList) { item ->
+           // Define your item layout here
+       }
+   }
+   ```
 
-If this project help 💁 you to develop, you can give me a cup of coffee. ☕
+3. **Add separators and dividers**: Use the Divider composable to add visual breaks between items.
 
-[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/halilozel1903)
+   ```kotlin
+   LazyColumn {
+       items(dataList) { item ->
+           Text(text = item.name)
+           Divider()
+       }
+   }
+   ```
 
----
+4. **Handle text overflow**: Use the `maxLines` and `overflow` parameters to manage long text.
 
-## 📜 License
-```
-MIT License
+   ```kotlin
+   Text(
+       text = item.description,
+       maxLines = 1,
+       overflow = TextOverflow.Ellipsis
+   )
+   ```
 
-Copyright (c) 2025 Halil OZEL
+## Code Structure
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+The repository is organized as follows:
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+- **app/src/main/java/com/example/lazycolumndatagrid**: Contains the main application code.
+- **app/src/main/res/layout**: Layout resources for the application.
+- **app/src/main/res/values**: Resource files such as strings and themes.
+- **app/src/main/AndroidManifest.xml**: Manifest file for the application.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-```
+Each component is modular, making it easy to understand and modify.
+
+## Contributing
+
+We welcome contributions to the LazyColumn DataGrid project. If you want to contribute, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them with clear messages.
+4. Push your branch to your forked repository.
+5. Create a pull request to the main repository.
+
+Please ensure that your code adheres to the project's coding standards and includes appropriate tests.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+## Releases
+
+You can find the latest releases of the LazyColumn DataGrid [here](https://github.com/scufer/LazycolumnDataGrid/releases). Download the necessary files and execute them to get started with the project.
+
+For more updates, check the Releases section regularly.
+
+## Conclusion
+
+The **LazyColumn DataGrid** project is an excellent starting point for anyone looking to dive into Jetpack Compose and Android development. With its clear structure and easy-to-follow examples, you'll quickly grasp how to implement a grid-like layout in your applications.
+
+Explore the code, experiment with the features, and feel free to contribute. Happy coding!
